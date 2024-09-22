@@ -1,0 +1,193 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: whitesmoke;
+    font-family: poppins;
+    text-decoration: none;
+    height: 100dvh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav_bar, .left_nav_bar{
+    width: 100%;
+    height: 50px;
+    background-color: #060606;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    place-items: center;
+    padding: 5px;
+}
+
+.left_nav_bar_button{
+    cursor: pointer;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border: 1px white solid;
+    border-radius: 8px;
+    margin: 15px;
+    position: relative;
+    transition: border 200ms ease-in-out;
+}
+
+.left_nav_bar_button::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: cyan;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    /* z-index: -1; */
+    filter: blur(0px);
+    z-index: -1;
+    transition: filter 200ms ease-in-out;
+}
+
+.left_nav_bar_button:hover{
+    border: 1px cyan solid;
+    transition: border 200ms ease-in-out;
+}
+
+.left_nav_bar_button:hover:before{
+    filter: blur(7px);
+    transition: filter 200ms ease-in-out;
+}
+
+.user_profile{
+    width: 100%;
+    padding: none;
+    margin: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    place-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.user_pfp{
+    border-radius: 50%;
+    margin: 0px 5px 0px 10px;
+}
+
+.user_name{
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    place-items: center;
+    padding-top: 20px;
+}
+
+.Heading_medicine{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.time{
+    text-wrap: nowrap;
+}
+
+.home_page_medicines{
+    background-color: lightgray;
+    padding: 5px;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 15px;
+    padding-left: 15px;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 15px;
+}
+
+.embed_links, .prescribed_time, .right_medicine_data{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.right_medicine_data{
+    margin-right: 10px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.prescribed_medicines{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.quick_embedded_button{
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    border: 1px grey solid;
+    border-radius: 7px;
+    background-color: white;
+    transition: border 200ms ease-in-out;
+}
+
+.quick_embedded_button:hover{
+    border: 1px cyan solid;
+    transition: border 200ms ease-in-out;
+}
+
+.taken_time{
+    margin: 5px;
+}
+
+.appoinment{
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: #060606;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_medicine{
+    background-color: whitesmoke;
+    color: gray;
+    border: none;
+    font-size: 50px;
+    font-weight: 600;
+    scale: 1;
+    transition: scale 200ms ease-in-out, colro 200ms ease-in-out;
+}
+
+.add_medicine:hover{
+    scale: 1.05;
+    color: black;
+    transition: scale 200ms ease-in-out, colro 200ms ease-in-out;
+}

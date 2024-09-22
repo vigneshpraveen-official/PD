@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="nav_bar">
+        
+        <div class="left_nav_bar">
+            <a href="Home.html">
+                <button class="left_nav_bar_button" id="home_button">home</button>
+            </a>
+            <a href="medicine.html">
+                <button class="left_nav_bar_button" id="medicine_button">Medicine</button>
+            </a>
+            <a href="report.html">
+                <button class="left_nav_bar_button" id="report_button">report</button>
+            </a>
+            <a href="">
+                <button class="left_nav_bar_button" id="settings_button">settings</button>
+            </a>
+        </div>
+
+        <div class="user_profile">
+            <a href="">
+                <h1 class="user_name" id="user_name">username</h1>
+            </a>
+            <a href="">
+                <img class="user_pfp" id="user_pfp" src="Meme.jpeg" alt="User Profile" width="40px" height="40px">
+            </a>
+        </div>
+    </div>
+
+    <h1 class="Heading_medicine">Todays Medicines :</h1>
+
+    <div class="content">
+        <!-- If there is no medicione prescribed for today -->
+        <!-- <h1 class="no_medcine_today" id="no_medcine_today">No Medicine For Today :)<br></h1> -->
+
+        
+
+        <!-- If medcine prescribed for today -->
+         <div class="home_page_medicines">
+
+            <div class="medicine_data">
+                <h1 class="medicine_name" id="medicine_1">Paracetomol</h1>
+                <p class="time" id="medicine_1_time">7:00 PM</p>
+            </div>
+
+
+            <div class="right_medicine_data">
+                <div class="embed_links">
+                    <a href="medicine.html">
+                        <button class="quick_embedded_button">Medicine</button>
+                    </a>
+
+                    <a href="report.html">
+                        <button class="quick_embedded_button">Report</button>
+                    </a>
+                </div>
+
+                <div class="prescribed_time">
+                    <h1 class="taken_time" id="morning">Morning</h1>
+                    <h1 class="taken_time"> - </h1>
+                    <h1 class="taken_time" id="evening">Evening</h1>
+                    <h1 class="taken_time"> - </h1>
+                    <h1 class="taken_time" id="nigth">Night</h1>
+                
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="appoinment">
+        <p class="appoinment" id="appoinment_ifPresent">You have an appoinment with xxx from yyy hospital at 7:00 PM.</p>
+        <!-- <p class="appoinment" id="appoinment_ifNotPresent">You have no appoinment today.</p> -->
+    </div>
+
+</body>
+</html>
