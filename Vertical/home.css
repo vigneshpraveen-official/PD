@@ -64,7 +64,6 @@ header {
 }
 
 .medicine-section {
-    text-align: center;
     margin-top: 30px;
 }
 
@@ -84,4 +83,49 @@ footer {
     padding: 10px 0;
     background-color: #f9f9f9;
     border-top: 1px solid #e0e0e0;
+}
+
+.medicines-list {
+    margin-top: 20px;
+}
+
+.medicine-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.medicine-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.medicine-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.medicine-time {
+    font-size: 14px;
+}
+
+.medicine-time.inactive {
+    color: #c0c0c0;
+    text-decoration: line-through;
+}
+
+.medicine-food {
+    font-size: 14px;
+    color: #808080;
+}
+
+.no_medicine{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    place-items: center;
+    justify-content: center;
 }

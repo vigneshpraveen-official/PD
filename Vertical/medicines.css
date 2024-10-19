@@ -99,6 +99,22 @@ header {
     color: #808080;
 }
 
+.add_medicine{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+}
+
+.add_medicine_btn{
+    font-size: x-large;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
 footer {
     margin-top: 30px;
     text-align: center;
