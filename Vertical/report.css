@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.report-container {
+    background-color: #ffffff;
+    width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icons button {
+    background: none;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.username-section {
+    display: flex;
+    align-items: center;
+}
+
+.username-section span {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.profile-pic-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: lightgrey;
+    border-radius: 50%;
+}
+
+.report-list {
+    margin-top: 20px;
+}
+
+.report-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.report-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.report-time {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.report-time img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}

@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    background-color: #ffffff;
+    width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icons button {
+    background: none;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.username-section {
+    display: flex;
+    align-items: center;
+}
+
+.username-section span {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.profile-pic-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: lightgrey;
+    border-radius: 50%;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.personal-info h2, .medical-info h2, .scans-section h2 {
+    margin-bottom: 10px;
+}
+
+.qr-section img {
+    width: 60px;
+    height: 60px;
+}
+
+.medical-info, .scans-section, .personal-info {
+    margin-top: 20px;
+}
+
+.scan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scan button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}

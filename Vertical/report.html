@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Page</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div class="report-container">
+        <header>
+            <div class="nav-icons">
+                <button onclick="navigate('home')"><img src="home-icon.png" alt="Home"></button>
+                <button onclick="navigate('documents')"><img src="docs-icon.png" alt="Documents"></button>
+                <button onclick="navigate('medicine')"><img src="medicine-icon.png" alt="Medicine"></button>
+                <button onclick="navigate('settings')"><img src="settings-icon.png" alt="Settings"></button>
+            </div>
+            <div class="username-section">
+                <span id="username">username</span>
+                <div class="profile-pic-placeholder"></div>
+            </div>
+        </header>
+
+        <div class="report-list">
+            <div class="report-item">
+                <p><strong>Dr.xxx</strong> from <strong>yyy hospital</strong></p>
+                <p>Issue: Stomach Pain</p>
+                <div class="report-time">
+                    <img src="pill-icon.png" alt="Medicine Icon">
+                    <span>29 sep, 7:00pm</span>
+                </div>
+            </div>
+
+            <div class="report-item">
+                <p><strong>Dr.xxx</strong> from <strong>yyy hospital</strong></p>
+                <p>Issue: Knee Pain</p>
+                <div class="report-time">
+                    <img src="pill-icon.png" alt="Medicine Icon">
+                    <span>12 sep, 7:00pm</span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>You have an appointment with Dr.xxx from yyy hospital at 7:00pm</p>
+        </footer>
+    </div>
+
+    <script src="report.js"></script>
+</body>
+</html>

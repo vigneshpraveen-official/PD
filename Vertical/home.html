@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="home-container">
+        <header>
+            <div class="nav-icons">
+                <button onclick="navigate('home')"><img src="home-icon.png" alt="Home"></button>
+                <button onclick="navigate('documents')"><img src="docs-icon.png" alt="Documents"></button>
+                <button onclick="navigate('medicine')"><img src="medicine-icon.png" alt="Medicine"></button>
+                <button onclick="navigate('settings')"><img src="settings-icon.png" alt="Settings"></button>
+            </div>
+            <div class="username-section">
+                <span id="username">username</span>
+                <div class="profile-pic-placeholder"></div>
+            </div>
+        </header>
+
+        <div class="date-navigation">
+            <button class="date-btn active">29 sep</button>
+            <button class="date-btn">30 sep</button>
+            <button class="date-btn">01 oct</button>
+            <button class="date-btn">02 oct</button>
+            <button class="date-btn">03 oct</button>
+            <button class="date-btn">04 oct</button>
+            <button class="date-btn">05 oct</button>
+            <button class="date-btn">06 oct</button>
+            <button class="date-btn">07 oct</button>
+            <button class="date-btn">08 oct</button>
+        </div>
+
+        <div class="medicine-section">
+            <div class="pill-icon">
+                <img src="pill-icon.png" alt="Pill">
+            </div>
+            <p class="medicine-message">You have no medicine to take today</p>
+        </div>
+
+        <footer>
+            <p>You have an appointment with Dr. xxx from yyy hospital at 7:00pm</p>
+        </footer>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

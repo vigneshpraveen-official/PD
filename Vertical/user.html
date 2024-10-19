@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header>
+            <div class="nav-icons">
+                <button onclick="navigate('home')"><img src="home-icon.png" alt="Home"></button>
+                <button onclick="navigate('documents')"><img src="docs-icon.png" alt="Documents"></button>
+                <button onclick="navigate('settings')"><img src="settings-icon.png" alt="Settings"></button>
+            </div>
+            <div class="username-section">
+                <span id="username">username</span>
+                <div class="profile-pic-placeholder"></div>
+            </div>
+        </header>
+
+        <div class="info-section">
+            <div class="personal-info">
+                <h2>Personal Info:</h2>
+                <p>Name: xxx</p>
+                <p>Number: 9500089074</p>
+                <p>Email: xxx@gmail.com</p>
+                <p>Emergency Number: 9000000009</p>
+                <p>Age: 29</p>
+            </div>
+
+            <div class="qr-section">
+                <img src="qr-placeholder.png" alt="QR Code">
+                <p>Unique ID: #1290009</p>
+            </div>
+        </div>
+
+        <div class="medical-info">
+            <h2>Medical Info:</h2>
+            <p>Blood: O+ve</p>
+            <p>Sugar: No</p>
+            <p>Caner: No</p>
+            <p>Allergies: Peanut Allergy</p>
+            <p>Asthma: No</p>
+            <p>Nerve Problems: No</p>
+            <p>Disabilities: None</p>
+            <p>Blood Level: Normal</p>
+        </div>
+
+        <div class="scans-section">
+            <h2>Scans:</h2>
+            <div class="scan">
+                <p>CET Scan - 29 Sep</p><button>View</button>
+            </div>
+            <div class="scan">
+                <p>Blood Test - 19 Sep</p><button>View</button>
+            </div>
+            <div class="scan">
+                <p>MRI Scan - 10 July</p><button>View</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>You have an appointment with Dr. xxx from yyy hospital at 7:00pm</p>
+        </footer>
+    </div>
+
+    <script src="user.js"></script>
+</body>
+</html>
