@@ -63,6 +63,8 @@ header {
 
 .report-time {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     margin-top: 5px;
 }
