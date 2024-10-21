@@ -67,3 +67,30 @@ input {
     cursor: pointer;
     font-size: 16px;
 }
+
+.nav-icons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Aligns the buttons vertically */
+}
+
+.nav-icons button {
+    background: none;
+    border: none;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-icons img {
+    width: 32px; /* Set a uniform width for the images */
+    height: 32px; /* Set a uniform height for the images */
+    object-fit: contain; /* Ensures that the aspect ratio is maintained */
+}
+
+/* Specific styles for the Home icon */
+.home-icon {
+    width: 32px; /* Set the width for the home icon */
+    height: 32px; /* Set the height for the home icon */
+    object-fit: contain; /* Ensures the home image fits within the set dimensions */
+}

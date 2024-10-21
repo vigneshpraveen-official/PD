@@ -20,12 +20,26 @@ header {
     align-items: center;
 }
 
+.nav-icons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Aligns the buttons vertically */
+}
+
 .nav-icons button {
     background: none;
     border: none;
     margin: 0 5px;
+    padding: 0;
     cursor: pointer;
 }
+
+.nav-icons img {
+    width: 32px; /* Set a uniform width for the images */
+    height: 32px; /* Set a uniform height for the images */
+    object-fit: contain; /* Ensures that the aspect ratio is maintained */
+}
+
 
 .username-section {
     display: flex;
@@ -37,11 +51,11 @@ header {
     margin-right: 10px;
 }
 
-.profile-pic-placeholder {
-    width: 40px;
-    height: 40px;
-    background-color: lightgrey;
-    border-radius: 50%;
+.profile-pic {
+    width: 32px; /* Same width as other icons */
+    height: 32px; /* Same height as other icons */
+    border-radius: 50%; /* To make the image circular */
+    object-fit: cover; /* Ensures the image covers the container evenly */
 }
 
 .info-section {

@@ -10,14 +10,17 @@
     <div class="medicines-container">
         <header>
             <div class="nav-icons">
-                <a href="home.html"> <button onclick="navigate('home')"><img src="home-icon.png" alt="Home"></button> </a>
-                <a href="report.html"> <button onclick="navigate('documents')"><img src="docs-icon.png" alt="Report"></button> </a>
-                <a href="medicines.html"> <button onclick="navigate('medicine')"><img src="medicine-icon.png" alt="Medicine"></button> </a>
-                <a href="settings.html"> <button onclick="navigate('settings')"><img src="settings-icon.png" alt="Settings"></button> </a>
+                <a href="home.html"> <button onclick="navigate('home')"><img src="icons/home.png" alt="Home"></button> </a>
+                <a href="report.html"> <button onclick="navigate('documents')"><img src="icons/report.png" alt="Report"></button> </a>
+                <a href="medicines.html"> <button onclick="navigate('medicine')"><img src="icons/medicine.png" alt="Medicine"></button> </a>
+                <a href="settings.html"> <button onclick="navigate('settings')"><img src="icons/settings.png" alt="Settings"></button> </a>
             </div>
+            
             <div class="username-section">
-                <a href="user.html" style="text-decoration: none;"> <span id="username">username</span> </a>
-                <div class="profile-pic-placeholder"></div>
+                <a href="user.html" style="text-decoration: none;"> 
+                    <span id="username">username</span> 
+                </a>
+                <img src="icons/profile.jpeg" alt="Profile Picture" class="profile-pic">
             </div>
         </header>
 
@@ -35,25 +38,10 @@
         </div>
 
         <div class="medicines-list">
-            <!-- <div class="medicine-item">
-                <p class="medicine-name">Rifaget 20g</p>
-                <div class="medicine-details">
-                    <span class="medicine-time">Night</span>
-                    <span class="medicine-food">Before Food</span>
-                </div>
-            </div>
-
-            <div class="medicine-item">
-                <p class="medicine-name">Paracetomol</p>
-                <div class="medicine-details">
-                    <span class="medicine-time">Morning</span>
-                    <span class="medicine-food">After Food</span>
-                </div>
-            </div> -->
-
+            
             <div class="no_medicine">
                 <div class="pill-icon">
-                    <img src="pill-icon.png" alt="Pill">
+                    <img src="icons/pill.png" alt="Pill">
                 </div>
                 <p class="medicine-message">You have no medicine to take today</p>
             </div>
