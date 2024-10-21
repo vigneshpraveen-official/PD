@@ -9,6 +9,8 @@ const buttons = document.querySelectorAll('.date-btn');
     });
 
     window.onload = function() {
+        loadMedicinesFromStorage();
+        initializeDateButtons();
         function checkForMedicines() {
             const medicineItems = document.querySelectorAll('.medicine-item');
             const noMedicineDiv = document.querySelector('.no_medicine');
@@ -18,10 +20,11 @@ const buttons = document.querySelectorAll('.date-btn');
                 noMedicineDiv.style.display = 'none';
             }
 
-            initializeDateButtons();
+            
         }
     
         checkForMedicines();
+        
     };
 
 function formatDate(date) {
@@ -40,43 +43,75 @@ function initializeDateButtons() {
         button.innerText = formatDate(currentDate);
     });
 }
-// window.onload = initializeDateButtons;
 
-    document.getElementById('add_medicine_btn').addEventListener('click', function() {
-        let medicineName = prompt("Enter the medicine name:");
-    
-        if (!medicineName) {
-            alert("Medicine name cannot be empty!");
-            return;
-        }
-    
-        let consumeTime = '';
-        consumeTime += confirm("Will you take this medicine in the Morning?") ? 'Morning,' : '';
-        consumeTime += confirm("Will you take this medicine in the Evening?") ? 'Evening,' : '';
-        consumeTime += confirm("Will you take this medicine at Night?") ? 'Night,' : '';
-    
-        if (!consumeTime) {
-            alert("You must select at least one time for taking the medicine!");
-            return;
-        }
-    
-        consumeTime = consumeTime.slice(0, -1);
-    
-        let beforeAfterFood = confirm("Should the medicine be taken Before Food?") ? "Before Food" : "After Food";
-    
-        let newMedicineItem = document.createElement('div');
-        newMedicineItem.classList.add('medicine-item');
-        
-        newMedicineItem.innerHTML = `
-            <p class="medicine-name">${medicineName}</p>
-            <div class="medicine-details">
-                ${consumeTime.split(',').map(time => `<span class="medicine-time">${time}</span>`).join('')}
-                <span class="medicine-food">${beforeAfterFood}</span>
-            </div>
-        `;
-    
-        document.querySelector('.medicines-list').insertBefore(newMedicineItem, document.querySelector('.add_medicine'));
-    
-        alert("New medicine added successfully!");
+function loadMedicinesFromStorage() {
+    let medicines = JSON.parse(localStorage.getItem('medicines')) || [];
+    medicines.forEach(medicine => {
+        displayMedicineItem(medicine);
     });
+}
+
+function displayMedicineItem(medicine) {
+    let newMedicineItem = document.createElement('div');
+    newMedicineItem.classList.add('medicine-item');
+
+    newMedicineItem.innerHTML = `
+        <p class="medicine-name">${medicine.medicineName}</p>
+        <div class="medicine-details">
+            ${medicine.medicineTime.map(time => `<span class="medicine-time">${time}</span>`).join('')}
+            <span class="medicine-food">${medicine.beforeFood ? 'Before Food' : 'After Food'}</span>
+        </div>
+    `;
+
+    document.querySelector('.medicines-list').insertBefore(newMedicineItem, document.querySelector('.add_medicine'));
+}
+
+document.getElementById('add_medicine_btn').addEventListener('click', function() {
+    let newMedicineItemForm = document.createElement('div');
+    newMedicineItemForm.classList.add('medicine-item');
+    newMedicineItemForm.innerHTML = `
+        <input id="medicineName" class="medicine-name" type="text" name="medicineName" placeholder="Medicine Name">
+        <div class="medicine-details">
+            <span class="medicine-time">    
+                <p>Check the boxes for the time</p>
+                <label for="morning"> Morning</label>
+                <input type="checkbox" id="morning" name="morning" value="morning">
+                
+                <label for="evening"> Evening</label>
+                <input type="checkbox" id="evening" name="evening" value="evening">
+                
+                <label for="night"> Night</label>
+                <input type="checkbox" id="night" name="night" value="night">
+            </span>
+            
+            <span class="medicine-food">
+                <label for="beforeFood"> Before Food?</label>
+                <input type="checkbox" id="beforeFood" name="beforeFood" value="beforeFood"><br>
+                <button id="newMedicineItemForm_submit" class="newMedicineItemForm_submit">Submit</button>
+            </span>
+        </div>
+    `;
+
+    document.querySelector('.medicines-list').insertBefore(newMedicineItemForm, document.querySelector('.add_medicine'));
+    document.getElementById('newMedicineItemForm_submit').addEventListener('click', function() {
+        let medicineName = document.getElementById('medicineName').value;
+        let medicineTime = [];
+        if (document.getElementById('morning').checked) medicineTime.push('Morning');
+        if (document.getElementById('evening').checked) medicineTime.push('Evening');
+        if (document.getElementById('night').checked) medicineTime.push('Night');
+        let beforeFood = document.getElementById('beforeFood').checked;
+        let medicine = {
+            medicineName,
+            medicineTime,
+            beforeFood
+        };
+        let medicines = JSON.parse(localStorage.getItem('medicines')) || [];
+        medicines.push(medicine);
+        localStorage.setItem('medicines', JSON.stringify(medicines));
+        displayMedicineItem(medicine);
+        newMedicineItemForm.remove();
+    });
+});
+
+
     
