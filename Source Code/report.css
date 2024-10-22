@@ -96,3 +96,10 @@ footer {
     background-color: #f9f9f9;
     border-top: 1px solid #e0e0e0;
 }
+
+.add_medicine_btn{
+    font-size: x-large;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
