@@ -1,4 +1,18 @@
 
+const dateBtns = document.querySelectorAll('.date-navigation .date-btn');
+
+let currentDate = new Date();
+function formatDate(date) {
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'short' });
+    return `${day < 10 ? '0' + day : day} ${month}`;
+}
+dateBtns.forEach((btn, index) => {
+    let btnDate = new Date(currentDate);
+    btnDate.setDate(currentDate.getDate() + index);
+    btn.textContent = formatDate(btnDate);
+});
+
 
 const buttons = document.querySelectorAll('.date-btn');
     buttons.forEach(button => {
