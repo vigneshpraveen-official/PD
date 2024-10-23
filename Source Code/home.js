@@ -1,5 +1,5 @@
 
-const dateBtns = document.querySelectorAll('.date-navigation .date-btn');
+const dateBtns = document.querySelectorAll('.date-btn');
 
 let currentDate = new Date();
 function formatDate(date) {

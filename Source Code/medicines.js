@@ -1,5 +1,5 @@
 
-const dateBtns = document.querySelectorAll('.date-navigation .date-btn');
+const dateBtns = document.querySelectorAll('.date-btn');
 
 let currentDate = new Date();
 function formatDate(date) {
@@ -113,6 +113,7 @@ document.getElementById('add_medicine_btn').addEventListener('click', function()
         displayMedicineItem(medicine, medicines.length - 1);
         checkForMedicines();
         newMedicineItemForm.remove();
+
     });
 });
 
